@@ -1,32 +1,54 @@
-# **Customer Churn Analysis in Power BI**
+# Customer Churn Analysis using Power BI
 
-## This project uses Power BI Desktop and Excel to help businesses prevent customer loss and improve customer service.
+## Project Objective
+The objective of this project is to help businesses understand and reduce customer attrition. Using Power BI Desktop, the dashboards identify customers at risk of churning and highlight the factors that drive retention.
 
-## **Key Features:**
-📌 Predictive Churn Modeling: Identify at-risk customers before they churn, enabling proactive interventions and retention strategies.
+## Repository Contents
+- `02 Customer Churn-Dataset.xlsx` – sample customer data used by the reports.
+- `Customer Churn Dashboard.pbix` – overview dashboard focused on churn metrics.
+- `Customer Risk Analysis Dashboard.pbix` – report exploring drivers of churn and customer risk.
+- `Customer Churn Dashboard.png` – preview of the churn dashboard.
+- `Customer Risk Analysis.png` – preview of the risk analysis dashboard.
 
-📌 Customer Segmentation: Group customers based on shared characteristics and churn risk, allowing for targeted marketing and engagement efforts.
-![Customer Churn Dashboard](https://github.com/DataVizExpert-Sham/Predictive-Customer-Analytics-in-Power-BI/assets/151017676/e91b9651-b26e-4ca0-af99-feb91311f5dd)
+## Dashboard Features
+- **Predictive churn modeling** to proactively flag high-risk customers.
+- **Customer segmentation** for tailored marketing and retention strategies.
+- KPI cards and trend visuals for quick insight.
+- Built entirely with Power BI Desktop and Excel.
 
-## **Built with:**
-1. Power BI Desktop
-2. Excel
+## Getting Started
+### Prerequisites
+- [Power BI Desktop](https://powerbi.microsoft.com/).
 
-## Key Insights:
-![key insights](https://github.com/DataVizExpert-Sham/Predictive-Customer-Analytics-in-Power-BI/assets/151017676/af60d484-23ad-4c03-ad5a-fc9af7ea0af4)
+### Clone the repository
+```bash
+git clone https://github.com/Pavankumarmanagoli/Customer-Churn-Analysis-using-Power-BI.git
+cd Customer-Churn-Analysis-using-Power-BI
+```
 
+### Open the dashboards
+1. Launch Power BI Desktop.
+2. Open `Customer Churn Dashboard.pbix` or `Customer Risk Analysis Dashboard.pbix`.
+3. Replace the sample dataset with your own data if desired.
+4. Refresh the data to view updated insights.
 
-## **Benefits:**
-1. Reduce customer loss: Identify and help customers at risk to keep them longer.
-2. Improve customer satisfaction: Understand customer needs better for better service.
-3. Make data-driven decisions: Use insights to make better choices for keeping customers happy.
-![Customer Risk Analysis](https://github.com/DataVizExpert-Sham/Predictive-Customer-Analytics-in-Power-BI/assets/151017676/17438de8-0003-488f-8c98-5e2e918bd4b7)
+#### Example DAX measure
+```DAX
+Churn Rate =
+DIVIDE(
+    CALCULATE(COUNTROWS(Customers), Customers[Churn] = "Yes"),
+    COUNTROWS(Customers)
+)
+```
 
+## Usage
+- Use the **Customer Churn Dashboard** for a high-level overview of churn KPIs.
+- Explore the **Customer Risk Analysis Dashboard** to understand the drivers behind churn.
+- Combine insights to design data‑driven retention strategies.
 
-**Get Started:**
-1. Get the project files.
-2. Open the Customer Churn Dashboard.pbix & Customer Risk Analysis Dashboard.pbix in Power BI Desktop.
-3. Connect to your data source.
-4. Start improving customer retention!
+## Dashboard Previews
+![Customer Churn Dashboard](Customer%20Churn%20Dashboard.png)
+![Customer Risk Analysis](Customer%20Risk%20Analysis.png)
 
-Use data insights and Power BI dashboards to keep customers happy and engaged. Note: This version highlights the project's benefits for businesses and includes a clear call to action.
+## License
+This project is licensed under the [MIT License](LICENSE).
